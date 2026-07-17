@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/vehiculos');
 });
+
+
 Route::get('/vehiculos', [VehiculoController::class, 'index']);
 
 Route::get('/vehiculos/create', [VehiculoController::class, 'create']);
